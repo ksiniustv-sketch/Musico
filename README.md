@@ -1,15 +1,8 @@
 <p align="center">
-  <img width="400" alt="Screenshot_20260817-113034" src="https://github.com/user-attachments/assets/8a52acd3-43ad-46d5-92ca-2657dc092cc1" />
+  <img width="250" alt="Screenshot_1" src="https://github.com/user-attachments/assets/8a52acd3-43ad-46d5-92ca-2657dc092cc1" />
+  <img width="250" alt="Screenshot_2" src="https://github.com/user-attachments/assets/3df2c0a0-ebc7-4821-b33d-46386566acb7" />
+  <img width="250" alt="Screenshot_3" src="https://github.com/user-attachments/assets/668887c0-9b35-4602-a28e-d5519350f20e" />
 </p>
-
-<p align="center">
-  <img width="400" alt="Screenshot_20260817-113317" src="https://github.com/user-attachments/assets/3df2c0a0-ebc7-4821-b33d-46386566acb7" />
-</p>
-
-<p align="center">
-  <img width="400" alt="Screenshot_20260817-113324" src="https://github.com/user-attachments/assets/668887c0-9b35-4602-a28e-d5519350f20e" />
-</p>
-
 # Musico
 Open Source Android music player
 
