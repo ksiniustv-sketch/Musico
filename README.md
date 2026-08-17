@@ -15,3 +15,9 @@ Open Source Android music player
 ## Requirements
 - Android 8.0+
 - Storage permission
+## Safety & Privacy
+- Open source
+- No internet connection required for music playback
+- Only local file access (your own music files wav and mp3 only ogg later and more formats) 
+- No ads, no tracking, no data collection
+- Purely offline music player
