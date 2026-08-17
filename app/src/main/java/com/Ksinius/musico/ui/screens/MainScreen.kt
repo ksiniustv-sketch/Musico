@@ -44,6 +44,7 @@ import androidx.compose.material.icons.filled.Refresh
 import androidx.compose.material.icons.filled.Repeat
 import androidx.compose.material.icons.filled.RepeatOne
 import androidx.compose.material.icons.filled.Brush
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Shuffle
 import androidx.compose.material.icons.filled.SortByAlpha
@@ -55,6 +56,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
@@ -139,6 +141,7 @@ fun MainScreen(
     var favoriteIds by remember { mutableStateOf(prefsManager.getFavoriteSongIds()) }
     var showSlowdownerSheet by remember { mutableStateOf(false) }
     var showThemesSheet by remember { mutableStateOf(false) }
+    var showInfoDialog by remember { mutableStateOf(false) }
     var themeSettings by remember { mutableStateOf(prefsManager.getThemeSettings()) }
     var isLoading by remember { mutableStateOf(false) }
     var hasPermission by remember { mutableStateOf(checkAudioPermission(context)) }
@@ -401,11 +404,18 @@ fun MainScreen(
                                     "${musicFolders.size} folders · ${songs.size} tracks"
                                 selectedSort == SortOption.FOLDERS && selectedFolderPath != null ->
                                     "${filteredAndSortedSongs.size} tracks in ${FolderUtils.folderName(selectedFolderPath!!)}"
-                                else -> "${filteredAndSortedSongs.size} tracks (${favoriteIds.size} favorites)"
+                                else -> "${filteredAndSortedSongs.size} tracks"
                             },
                             style = MaterialTheme.typography.bodySmall,
                             color = dynamicAccentColor(themeSettings)
                         )
+                        if (hasPermission && selectedSort != SortOption.FOLDERS) {
+                            Text(
+                                text = "${favoriteIds.size} favorites",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = dynamicAccentColor(themeSettings)
+                            )
+                        }
                     }
                 }
 
@@ -462,6 +472,21 @@ fun MainScreen(
                             Icon(
                                 imageVector = Icons.Default.Refresh,
                                 contentDescription = "Rescan Storage",
+                                tint = dynamicPrimaryColor(themeSettings)
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.width(8.dp))
+
+                        IconButton(
+                            onClick = { showInfoDialog = true },
+                            modifier = Modifier
+                                .clip(CircleShape)
+                                .background(SurfaceGlass)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Info,
+                                contentDescription = "App Info",
                                 tint = dynamicPrimaryColor(themeSettings)
                             )
                         }
@@ -797,6 +822,67 @@ fun MainScreen(
                 }
             }
         }
+
+        // Info Dialog
+        if (showInfoDialog) {
+            AlertDialog(
+                onDismissRequest = { showInfoDialog = false },
+                title = {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(
+                            imageVector = Icons.Default.MusicNote,
+                            contentDescription = "Musico Icon",
+                            tint = dynamicPrimaryColor(themeSettings),
+                            modifier = Modifier.size(24.dp)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = "MUSICO",
+                            style = MaterialTheme.typography.titleLarge.copy(fontWeight = FontWeight.Bold),
+                            color = dynamicPrimaryColor(themeSettings)
+                        )
+                    }
+                },
+                text = {
+                    Column {
+                        Text(
+                            text = "Open source music app",
+                            style = MaterialTheme.typography.bodyMedium,
+                            color = TextSecondary
+                        )
+                        Spacer(modifier = Modifier.height(8.dp))
+                        Text(
+                            text = "Made by - ksinius",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = TextMuted
+                        )
+                        Spacer(modifier = Modifier.height(16.dp))
+                        Text(
+                            text = "Features:",
+                            style = MaterialTheme.typography.titleSmall.copy(fontWeight = FontWeight.Bold),
+                            color = TextPrimary
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = "• RGB Theme Customization\n• High-Quality Audio Slowdown\n• Skip 10s Forward/Backward\n• Speed & Pitch Control\n• Folder Organization\n• Search & Sort\n• Favorites System",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = TextSecondary
+                        )
+                    }
+                },
+                confirmButton = {
+                    Button(
+                        onClick = { showInfoDialog = false },
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = dynamicPrimaryColor(themeSettings),
+                            contentColor = PureBlack
+                        )
+                    ) {
+                        Text("OK")
+                    }
+                }
+            )
+        }
     }
 
     // Slide-in Music Slowdowner & Pitch Modal Drawer Sheet
@@ -892,7 +978,7 @@ fun MainScreen(
                                 color = TextPrimary
                             )
                             Text(
-                                text = "Disable if you want to have advanced of speed & pitch",
+                                text = "Disable if you want to have advanced control of speed & pitch",
                                 style = MaterialTheme.typography.bodySmall.copy(fontSize = 11.sp),
                                 color = dynamicAccentColor(themeSettings)
                             )
