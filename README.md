@@ -18,6 +18,6 @@ Open Source Android music player
 ## Safety & Privacy
 - Open source
 - No internet connection required for music playback
-- Only local file access (your own music files wav and mp3 only ogg later and more formats) 
+- Only local file access (your own music files wav and mp3 only for now) 
 - No ads, no tracking, no data collection
 - Purely offline music player
