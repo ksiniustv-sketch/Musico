@@ -13,6 +13,8 @@
 </p>
 <p style="font-size: 20px;"><b>Note: The tracks included in these screenshots are for demonstration purposes only and are not intended for promotion or commercial use.</b></p>
 
+![Kotlin](https://shields.io)
+
 # Musico
 Open Source Android music player
 
