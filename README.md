@@ -1,10 +1,9 @@
 <!-- FIRST ROW: 3 images side-by-side -->
 <p align="center">
-  <img width="250" alt="Screenshot_1" src="https://github.com/user-attachments/assets/8a52acd3-43ad-46d5-92ca-2657dc092cc1" />
-  <img width="250" alt="Screenshot_2" src="https://github.com/user-attachments/assets/3df2c0a0-ebc7-4821-b33d-46386566acb7" />
-  <img width="250" alt="Screenshot_3" src="https://github.com/user-attachments/assets/668887c0-9b35-4602-a28e-d5519350f20e" />
+  <img width="250" alt="Screenshot_1" src="https://github.com/user-attachments/assets/c33a7e91-9bb5-4cec-ac3e-2728d6a0becd" />
+  <img width="250" alt="Screenshot_2" src="https://github.com/user-attachments/assets/02dbf268-d6d5-4957-828d-d6f8073f632d" />
+  <img width="250" alt="Screenshot_3" src="https://github.com/user-attachments/assets/9235357e-602c-4310-ad2d-7c4ae7c53bef" />
 </p>
-
 <!-- SECOND ROW: 2 new images side-by-side below -->
 <p align="center">
   <img width="250" alt="Screenshot_20260817-114114" src="https://github.com/user-attachments/assets/42f67f94-6cd1-49c8-bd6d-85ae418115af" />
