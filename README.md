@@ -15,6 +15,7 @@
 
 ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Music](https://img.shields.io/badge/Music-1DB954?style=for-the-badge&logo=applemusic&logoColor=white)
 
 
 # Musico
