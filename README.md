@@ -10,7 +10,7 @@
   <img width="250" alt="Screenshot_20260817-114114" src="https://github.com/user-attachments/assets/42f67f94-6cd1-49c8-bd6d-85ae418115af" />
   <img width="250" alt="Screenshot_20260817-114127" src="https://github.com/user-attachments/assets/24e4ac97-7325-4c27-a4da-3952b41a8140" />
 </p>
-*Note: The tracks included in these screenshots are for demonstration purposes only and are not intended for promotion or commercial use.*
+<p style="font-size: 20px;"><b>Note: The tracks included in these screenshots are for demonstration purposes only and are not intended for promotion or commercial use.</b></p>
 
 # Musico
 Open Source Android music player
