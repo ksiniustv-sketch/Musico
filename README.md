@@ -1,14 +1,16 @@
+
+
 <!-- FIRST ROW: 3 images side-by-side -->
 <p align="center">
-  <img width="250" alt="Screenshot_1" src="https://github.com/user-attachments/assets/8a52acd3-43ad-46d5-92ca-2657dc092cc1" />
-  <img width="250" alt="Screenshot_2" src="https://github.com/user-attachments/assets/3df2c0a0-ebc7-4821-b33d-46386566acb7" />
-  <img width="250" alt="Screenshot_3" src="https://github.com/user-attachments/assets/668887c0-9b35-4602-a28e-d5519350f20e" />
+  <img width="250" alt="Screenshot_1" src="https://github.com/user-attachments/assets/c33a7e91-9bb5-4cec-ac3e-2728d6a0becd" />
+  <img width="250" alt="Screenshot_2" src="https://github.com/user-attachments/assets/02dbf268-d6d5-4957-828d-d6f8073f632d" />
+  <img width="250" alt="Screenshot_3" src="https://github.com/user-attachments/assets/9235357e-602c-4310-ad2d-7c4ae7c53bef" />
 </p>
-
 <!-- SECOND ROW: 2 new images side-by-side below -->
 <p align="center">
-  <img width="250" alt="Screenshot_20260817-114114" src="https://github.com/user-attachments/assets/42f67f94-6cd1-49c8-bd6d-85ae418115af" />
-  <img width="250" alt="Screenshot_20260817-114127" src="https://github.com/user-attachments/assets/24e4ac97-7325-4c27-a4da-3952b41a8140" />
+  <img width="250" alt="Screenshot_4" src="https://github.com/user-attachments/assets/42f67f94-6cd1-49c8-bd6d-85ae418115af" />
+  <img width="250" alt="Screenshot_5" src="https://github.com/user-attachments/assets/24e45211-e0ea-426c-9b35-811c56b5daed" />
+  <img width="250" alt="Screenshot_6" src="https://github.com/user-attachments/assets/6ab362e9-1f49-4f43-af5d-fbb485326a7d" />
 </p>
 <p style="font-size: 20px;"><b>Note: The tracks included in these screenshots are for demonstration purposes only and are not intended for promotion or commercial use.</b></p>
 
