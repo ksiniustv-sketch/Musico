@@ -750,6 +750,7 @@ fun MainScreen(
                                 Spacer(modifier = Modifier.height(12.dp))
                                 Text(
                                     text = when {
+                                        selectedSort == SortOption.FAVORITES && searchQuery.isNotEmpty() -> "No songs matching '$searchQuery' in favorites"
                                         selectedSort == SortOption.FAVORITES -> "No favorite songs added yet!\nTap the heart icon on any song to add it here."
                                         selectedSort == SortOption.FOLDERS && selectedFolderPath != null -> "No tracks in this folder"
                                         searchQuery.isNotEmpty() -> "No tracks matching '$searchQuery'"
