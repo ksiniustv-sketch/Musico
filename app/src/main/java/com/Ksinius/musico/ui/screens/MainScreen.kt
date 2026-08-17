@@ -401,20 +401,35 @@ fun MainScreen(
                             text = when {
                                 hasPermission == false -> "Storage Scanner"
                                 selectedSort == SortOption.FOLDERS && selectedFolderPath == null ->
-                                    "${musicFolders.size} folders · ${songs.size} tracks"
+                                    "${musicFolders.size} folders"
                                 selectedSort == SortOption.FOLDERS && selectedFolderPath != null ->
-                                    "${filteredAndSortedSongs.size} tracks in ${FolderUtils.folderName(selectedFolderPath!!)}"
+                                    "${filteredAndSortedSongs.size} tracks"
                                 else -> "${filteredAndSortedSongs.size} tracks"
                             },
                             style = MaterialTheme.typography.bodySmall,
                             color = dynamicAccentColor(themeSettings)
                         )
-                        if (hasPermission && selectedSort != SortOption.FOLDERS) {
-                            Text(
-                                text = "${favoriteIds.size} favorites",
-                                style = MaterialTheme.typography.bodySmall,
-                                color = dynamicAccentColor(themeSettings)
-                            )
+                        if (hasPermission) {
+                            when {
+                                selectedSort == SortOption.FOLDERS && selectedFolderPath == null ->
+                                    Text(
+                                        text = "${songs.size} tracks",
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = dynamicAccentColor(themeSettings)
+                                    )
+                                selectedSort == SortOption.FOLDERS && selectedFolderPath != null ->
+                                    Text(
+                                        text = "in ${FolderUtils.folderName(selectedFolderPath!!)}",
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = dynamicAccentColor(themeSettings)
+                                    )
+                                else ->
+                                    Text(
+                                        text = "${favoriteIds.size} favorites",
+                                        style = MaterialTheme.typography.bodySmall,
+                                        color = dynamicAccentColor(themeSettings)
+                                    )
+                            }
                         }
                     }
                 }
