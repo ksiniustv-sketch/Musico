@@ -121,7 +121,7 @@ enum class SortOption(val label: String) {
     TITLE_ZA("Z ➔ A"),
     NEWEST("Newest"),
     OLDEST("Oldest"),
-    FAVORITES("❤️ Favorites"),
+    FAVORITES("Favorites"),
     FOLDERS("Folders")
 }
 
