@@ -1,4 +1,3 @@
-## Read Me
 
 ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
@@ -7,6 +6,7 @@
 
 # Musico
 Open Source Android music player
+steal code if you want...
 
 ## Features
 - RGB color sliders for theme customization
@@ -17,7 +17,7 @@ Open Source Android music player
 - Favorites system
 - Cool ui!
 - and much more 
-- 
+  
 
 ## Download
 [APK in Releases](https://github.com/ksiniustv-sketch/Musico/releases)
@@ -31,4 +31,5 @@ Open Source Android music player
 - Only local file access (your own music files wav and mp3 only for now) 
 - No ads, no tracking, no data collection
 - Purely offline music player
-  
+## Updates
+
