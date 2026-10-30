@@ -31,5 +31,3 @@ steal code if you want...
 - Only local file access (your own music files wav and mp3 only for now) 
 - No ads, no tracking, no data collection
 - Purely offline music player
-## Updates
-
